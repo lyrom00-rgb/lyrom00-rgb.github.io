@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #e3d7d2;
+  color: #fffcea;
+}
+
+a {
+  color: #fffcea;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.page {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+}
+
+.section {
+  min-height: 100vh;
+  padding: top 80px;
+}
