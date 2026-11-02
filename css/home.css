@@ -1,39 +1,81 @@
-.home {
+.hero {
+  position: relative;
+  padding: 14px 28px 10px;
+  background: var(--page-bg);
+  text-align: center;
+}
+
+.hero-ornament {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hero-ornament img {
+  width: 100%;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.95;
+}
+
+.hero-title-wrap {
   display: flex;
-  padding-top: 20px;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 10px;
+  min-height: 220px;
+  margin-top: 12px;
+  margin-bottom: 14px;
+  padding: 18px 0 14px;
+}
+
+.hero-title {
+  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  gap: 115px;
-  align-self: stretch;
-}
+  margin: 0;
+  color: var(--dark-blue);
+  font-size: clamp(4rem, 7.6vw, 8.4rem);
+  line-height: 0.72;
+  letter-spacing: -0.08em;
 
-.graphics {
-  height: 98px;
-  align-self: fill;
-}
-
-.big-text {
-  width: 504px;
-  height: 281px;
-
-  color: #252867;
-  font-family: "Archivo Black";
-  font-size: 132px;
-  font-style: normal;
+  font-family: "Archivo Black", sans-serif;
   font-weight: 400;
-  line-height: 80%;
+  font-style: normal;
 }
 
-.small-text {
-  width: 295px;
-  height: 40px;
-
-  color: #bd1041;
-  /* add */
-  font-family: Unbounded;
-  font-size: 28px;
-  font-style: normal;
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
   font-weight: 400;
-  line-height: normal;
+  font-style: normal;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.hero-subtitle {
+  margin: 0;
+  position: relative;
+  top: -12px;
+  color: var(--accent-red);
+  font-size: clamp(1.2rem, 2vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 18px;
+  }
+
+  .hero-title-wrap {
+    min-height: 170px;
+  }
+
+  .hero-subtitle {
+    top: 0;
+  }
 }

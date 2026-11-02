@@ -1,57 +1,92 @@
-.page {
-  display: flex;
-  width: 100%;
-  height: 4090px;
-  flex-direction: column;
-  align-items: center;
-  gap: 84px;
-}
-
-.header {
-  display: flex;
-  width: 100%;
-  height: 104px;
-  padding: 30px 60px;
-  justify-content: center;
-  align-items: center;
-  gap: 629px;
-
+.site-header {
   position: fixed;
   top: 0;
   left: 0;
-
-  background: #252867;
+  width: 100%;
+  z-index: 1000;
+  background: var(--dark-blue);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.header-wrapper {
+.nav-wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  min-height: 86px;
+  padding: 8px 30px 6px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: inline-flex;
   align-items: center;
-  flex-shrink: 0;
-
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 16px 0px;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
 }
 
-.menu {
+.brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.25));
+}
+
+.main-nav {
   display: flex;
-  width: 654px;
-  justify-content: flex-end;
   align-items: center;
-  gap: 51px;
-  flex-shrink: 0;
-  list-style: none;
+  justify-content: center;
+  gap: clamp(18px, 2.8vw, 38px);
+  font-size: clamp(1rem, 1.7vw, 1.55rem);
+  font-weight: 700;
+  color: #edf3ff;
 }
 
-.menu a {
-  display: flex;
-  padding: 4px;
-  border-radius: 8px 16px;
+.main-nav a {
+  position: relative;
+  padding: 4px 0;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
 }
 
-.menu a:hover {
-  background-color: yellow;
-  color: black;
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+  .nav-wrap {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    min-height: 118px;
+    padding-top: 14px;
+    padding-bottom: 12px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    font-size: 1rem;
+  }
 }
