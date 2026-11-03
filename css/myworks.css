@@ -1,8 +1,8 @@
-.my-works {
+.myWorks {
   padding: 18px 28px 24px;
 }
 
-.my-works h2 {
+.myWorks h2 {
   margin: 0 0 18px;
   color: var(--ink);
   text-align: center;
@@ -11,11 +11,11 @@
   line-height: 0.9;
 }
 
-.portfolio-group {
+.portfolioGroup {
   margin-bottom: 26px;
 }
 
-.portfolio-group > h3 {
+.portfolioGroup > h3 {
   margin: 0 0 16px;
   text-align: center;
   font-size: clamp(1.3rem, 2vw, 2.1rem);
@@ -23,71 +23,71 @@
   font-weight: 700;
 }
 
-.works-grid {
+.worksGrid {
   display: grid;
   gap: 18px;
   align-items: stretch;
 }
 
-.posters-grid {
+.postersGrid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.work-card {
+.workCard {
   overflow: hidden;
   border-radius: 12px;
   background: transparent;
   box-shadow: none;
 }
 
-.work-card img {
+.workCard img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.merch-stickers-row {
+.merchStickersRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
   align-items: start;
 }
 
-.merch-row,
-.stickers-row,
-.packaging-row,
-.illustration-row {
+.merchRow,
+.stickersRow,
+.packagingRow,
+.illustrationRow {
   display: grid;
   gap: 18px;
 }
 
-.merch-row {
+.merchRow {
   grid-template-columns: 1fr;
   justify-items: center;
 }
 
-.merch-row .work-card {
+.merchRow .workCard {
   width: min(100%, 480px);
   min-height: 220px;
 }
 
-.stickers-row {
+.stickersRow {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.packaging-row {
+.packagingRow {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
-.packaging-row .work-card {
+.packagingRow .workCard {
   min-height: 220px;
   background: transparent;
   border-radius: 0;
   box-shadow: none;
 }
 
-.packaging-row .work-card img {
+.packagingRow .workCard img {
   object-fit: contain;
   width: auto;
   max-width: 100%;
@@ -95,43 +95,43 @@
   margin: 0 auto;
 }
 
-.illustration-row {
+.illustrationRow {
   grid-template-columns: 1.15fr 1.4fr;
   gap: 18px;
 }
 
-.illustration-row .work-card {
+.illustrationRow .workCard {
   background: transparent;
   border-radius: 0;
   box-shadow: none;
 }
 
-.illustration-row .work-card img {
+.illustrationRow .workCard img {
   object-fit: contain;
   background: #efeee9;
   margin: 0 auto;
 }
 
 @media (max-width: 980px) {
-  .posters-grid {
+  .postersGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .merch-stickers-row,
-  .stickers-row,
-  .packaging-row,
-  .illustration-row {
+  .merchStickersRow,
+  .stickersRow,
+  .packagingRow,
+  .illustrationRow {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 640px) {
-  .my-works {
+  .myWorks {
     padding-left: 18px;
     padding-right: 18px;
   }
 
-  .posters-grid {
+  .postersGrid {
     grid-template-columns: 1fr;
   }
 }

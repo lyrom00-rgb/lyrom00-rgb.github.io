@@ -1,8 +1,8 @@
-.about-me {
+.aboutMe {
   padding: 18px 36px 30px;
 }
 
-.about-grid {
+.aboutGrid {
   max-width: 900px;
   margin: 0 auto;
   display: grid;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.portrait-wrap {
+.portraitWrap {
   width: min(100%, 360px);
   margin: 0 auto;
   border-radius: 18px;
@@ -20,14 +20,14 @@
   background: #d9cab8;
 }
 
-.portrait-wrap img {
+.portraitWrap img {
   width: 100%;
   height: 430px;
   object-fit: cover;
   object-position: center top;
 }
 
-.about-copy h2 {
+.aboutCopy h2 {
   margin: 0 0 18px;
   color: var(--ink);
   font-size: clamp(2.8rem, 5vw, 4.1rem);
@@ -35,14 +35,14 @@
   line-height: 0.95;
 }
 
-.about-copy p {
+.aboutCopy p {
   margin: 0 0 12px;
   color: var(--ink);
   font-size: 1.06rem;
   line-height: 1.55;
 }
 
-.about-copy h3 {
+.aboutCopy h3 {
   margin: 18px 0 14px;
   color: var(--ink);
   font-size: 1.5rem;
@@ -82,18 +82,18 @@
 }
 
 @media (max-width: 980px) {
-  .about-grid {
+  .aboutGrid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .portrait-wrap {
+  .portraitWrap {
     max-width: 420px;
   }
 }
 
 @media (max-width: 640px) {
-  .about-me {
+  .aboutMe {
     padding: 26px 18px 24px;
   }
 }

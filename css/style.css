@@ -40,7 +40,7 @@ figure {
   margin: 0;
 }
 
-.page-shell {
+.pageShell {
   width: 100%;
   max-width: 1042px;
   margin: 0 auto;
@@ -48,26 +48,26 @@ figure {
   box-shadow: none;
 }
 
-.page-content,
-.about-me,
-.my-works,
-.site-footer {
+.pageContent,
+.aboutMe,
+.myWorks,
+.siteFooter {
   width: 100%;
 }
 
 h2,
 h3,
-.hero-title,
-.contacts-row,
-.main-nav {
+.heroTitle,
+.contactsRow,
+.mainNav {
   font-family: "Unbounded", sans-serif;
   font-optical-sizing: auto;
 }
 
-.hero-title,
-.about-copy h2,
-.my-works h2,
-.site-footer h2 {
+.heroTitle,
+.aboutCopy h2,
+.myWorks h2,
+.siteFooter h2 {
   letter-spacing: -0.06em;
 }
 
