@@ -1,262 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roman Lysun</title>
-  <style>
-    body {
-      margin: 0;
-      background: #f2ece8;
-      font-family: Arial, sans-serif;
-    }
+  <title>Roman Lysun | Graphic designer</title>
 
-    .pageShell {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+  <!-- <meta name="description" content="lyrom.github.io">
+  <meta property="og:title" content="lyrom.github.io">
+  <meta property="og:description" content="lyrom.github.io">
+  <meta property="og:url" content="https://lyrom00-rgb.github.io/">
+  <meta property="og:image" content="https://lyrom00-rgb.github.io/images/og-image.png">
 
-    .siteHeader {
-      background: #112d67;
-      color: white;
-      padding: 20px 30px;
-    }
+  <meta property="og:description" content="Опис моєї сторінки">
+  <meta property="og:url" content="https://lyrom00-rgb.github.io/">
+  <meta property="og:image" content="https://lyrom00-rgb.github.io/images/og-image.png"> -->
 
-    .navWrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  <link rel="stylesheet" href="./style.css">
 
-    .brand img {
-      width: 60px;
-      height: 60px;
-    }
 
-    .mainNav {
-      display: flex;
-      gap: 25px;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Unbounded:wght@200..900&display=swap"
+    rel="stylesheet">
 
-    .mainNav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
-    .hero {
-      background: #f5f0ed;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .heroTitle {
-      font-size: 70px;
-      margin: 0;
-      color: #112d67;
-    }
-
-    .heroSubtitle {
-      color: #c5454a;
-      font-size: 30px;
-      margin-top: 10px;
-    }
-
-    .aboutMe {
-      padding: 50px 30px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .aboutGrid {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 40px;
-      align-items: center;
-      max-width: 1000px;
-    }
-
-    .portraitWrap img {
-      width: 100%;
-      max-width: 350px;
-      display: block;
-      margin: 0 auto;
-      border-radius: 20px;
-    }
-
-    .aboutCopy h2 {
-      font-size: 40px;
-      margin-bottom: 20px;
-      color: #1b2d5c;
-    }
-
-    .aboutCopy p {
-      color: #1b2d5c;
-      line-height: 1.7;
-      font-size: 18px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .skill {
-      width: 60px;
-      height: 60px;
-      background: #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .skill img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .myWorks {
-      padding: 40px 30px 60px;
-    }
-
-    .myWorks h2 {
-      text-align: center;
-      font-size: 42px;
-      color: #1b2d5c;
-      margin-bottom: 30px;
-    }
-
-    .portfolioGroup {
-      margin-bottom: 40px;
-    }
-
-    .portfolioGroup h3 {
-      font-size: 28px;
-      margin-bottom: 15px;
-      color: #1b2d5c;
-    }
-
-    .worksGrid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .workCard {
-      background: #e6dddd;
-      height: 220px;
-      overflow: hidden;
-    }
-
-    .workCard img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .siteFooter {
-      background: #112d67;
-      color: white;
-      padding: 30px 20px 50px;
-    }
-
-    .footerContent {
-      text-align: center;
-    }
-
-    .contactsRow {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-
-    .contactsRow a {
-      color: white;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .contactsRow img {
-      width: 24px;
-      height: 24px;
-    }
-
-    .footerBlueBand {
-      height: 30px;
-      background: #112d67;
-      margin-top: 20px;
-    }
-
-    @media (max-width: 900px) {
-      .aboutGrid {
-        grid-template-columns: 1fr;
-      }
-
-      .worksGrid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .navWrap {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .worksGrid {
-        grid-template-columns: 1fr;
-      }
-
-      .heroTitle {
-        font-size: 44px;
-      }
-    }
-  </style>
 </head>
+
 <body>
   <div class="pageShell">
-    <header class="siteHeader">
+    <div class="siteHeader">
       <div class="navWrap">
-        <a href="#home" class="brand">
+        <a href="#home" class="logo" aria-label="На головну">
           <img src="./images/logo.png" alt="Logo">
         </a>
 
-        <nav class="mainNav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#portfolio">My works</a>
-          <a href="#contacts">Contacts</a>
-        </nav>
+        <ul class="mainNav" aria-label="Основна навігація">
+          <li><a href="#about">Про мене</a></li>
+          <li><a href="#portfolio">Мої роботи</a></li>
+          <li><a href="#contacts">Контакти</a></li>
+        </ul>
       </div>
-    </header>
+    </div>
 
-    <main>
+    <main class="pageContent">
       <section class="hero" id="home">
-        <h1 class="heroTitle">Roman <span>Lysun</span></h1>
-        <p class="heroSubtitle">Graphic designer</p>
+        <div class="heroOrnament" aria-hidden="true">
+          <img src="./images/graphics.png" alt="">
+        </div>
+
+        <div class="heroTitleWrap">
+          <h1 class="heroTitle">Roman <span>Lysun</span></h1>
+          <p class="heroSubtitle">Graphic designer</p>
+        </div>
+
+        <div class="heroOrnament" aria-hidden="true">
+          <img src="./images/graphics.png" alt="">
+        </div>
       </section>
 
       <section class="aboutMe" id="about">
         <div class="aboutGrid">
           <div class="portraitWrap">
-            <img src="./images/me.png" alt="Roman">
+            <img src="./images/me.png" alt="Roman Lysun">
           </div>
 
           <div class="aboutCopy">
-            <h2>About me</h2>
-            <p>Hi, my name is Romko. I am 19 years old and I am a graphic designer.</p>
-            <p>I study at college and I like design, art, and creating things.</p>
-            <p>I also like playing guitar, traveling, and reading books.</p>
+            <h2>Про мене</h2>
+            <p>Привіт, мене звати Ромко, мені 19 років і я графічний дизайнер. На даний момент вчуся на четвертому курсі
+              в коледжі імені Івана Труша на спеціалізації “Графічний дизайн”.</p>
+            <p>Окрім навчання, належу до організації Пласт, де навчився організовувати заходи, менеджити командні
+              проєкти та в цілому більшість того, що я знаю про світ.</p>
+            <p>Люблю грати на гітарі, сопілці та піаніно, мандрувати і багато читати.</p>
 
-            <h3>My skills:</h3>
-            <div class="skills">
+            <h3>Мої навички:</h3>
+            <div class="skills" aria-label="Навички">
               <div class="skill"><img src="./images/Ps.png" alt="Photoshop"></div>
               <div class="skill"><img src="./images/Ai.png" alt="Illustrator"></div>
               <div class="skill"><img src="./images/Id.png" alt="InDesign"></div>
@@ -267,25 +88,50 @@
       </section>
 
       <section class="myWorks" id="portfolio">
-        <h2>My works</h2>
+        <h2>Мої роботи</h2>
 
         <div class="portfolioGroup">
-          <h3>Posters</h3>
-          <div class="worksGrid">
-            <figure class="workCard"><img src="./images/poster1.png" alt=""></figure>
-            <figure class="workCard"><img src="./images/poster2.png" alt=""></figure>
-            <figure class="workCard"><img src="./images/poster3.png" alt=""></figure>
-            <figure class="workCard"><img src="./images/poster4.png" alt=""></figure>
+          <h3>Плакати</h3>
+          <div class="worksGrid postersGrid">
+            <figure class="workCard"><img src="./images/poster1.png" alt="Poster 1"></figure>
+            <figure class="workCard"><img src="./images/poster2.png" alt="Poster 2"></figure>
+            <figure class="workCard"><img src="./images/poster3.png" alt="Poster 3"></figure>
+            <figure class="workCard"><img src="./images/poster4.png" alt="Poster 4"></figure>
+          </div>
+        </div>
+
+        <div class="portfolioGroup merchStickersRow">
+          <div>
+            <h3>Мерч</h3>
+            <div class="merchRow">
+              <figure class="workCard"><img src="./images/merch.png" alt="Merch design"></figure>
+            </div>
+          </div>
+
+          <div>
+            <h3>Стікери</h3>
+            <div class="stickersRow">
+              <figure class="workCard"><img src="./images/sticker1.png" alt="Sticker pack 1"></figure>
+              <figure class="workCard"><img src="./images/sticker2.png" alt="Sticker pack 2"></figure>
+            </div>
           </div>
         </div>
 
         <div class="portfolioGroup">
-          <h3>Merch</h3>
-          <div class="worksGrid">
-            <figure class="workCard"><img src="./images/merch.png" alt=""></figure>
-            <figure class="workCard"><img src="./images/sticker1.png" alt=""></figure>
-            <figure class="workCard"><img src="./images/sticker2.png" alt=""></figure>
-            <figure class="workCard"><img src="./images/waffles1.png" alt=""></figure>
+          <h3>Упакування вафель</h3>
+          <div class="packagingRow">
+            <figure class="workCard"><img src="./images/waffles1.png" alt="Waffles packaging #1"></figure>
+            <figure class="workCard"><img src="./images/waffles2.png" alt="Waffles packaging #2"></figure>
+          </div>
+        </div>
+
+        <div class="portfolioGroup">
+          <h3>Ілюстрація статті</h3>
+          <div class="illustrationRow">
+            <figure class="workCard"><img src="./images/illustration1.png" alt="Illustration article spread 1">
+            </figure>
+            <figure class="workCard"><img src="./images/illustration2.png" alt="Illustration article spread 2">
+            </figure>
           </div>
         </div>
       </section>
@@ -293,23 +139,24 @@
 
     <footer class="siteFooter" id="contacts">
       <div class="footerContent">
-        <h2>Contacts</h2>
+        <h2>Контакти</h2>
 
         <div class="contactsRow">
-          <a href="https://instagram.com/_lyrom_">
-            <img src="./images/iconi.png" alt="">
-            @_lyrom_
+          <a href="https://instagram.com/_lyrom_" target="_blank" rel="noreferrer">
+            <img src="./images/iconi.png" alt="Instagram icon">
+            <span>@_lyrom_</span>
           </a>
 
           <a href="tel:+380685055844">
-            <img src="./images/iconw.png" alt="">
-            +38 (068) 505 5844
+            <img src="./images/iconw.png" alt="WhatsApp icon">
+            <span>+38 (068) 505 5844</span>
           </a>
         </div>
       </div>
 
-      <div class="footerBlueBand"></div>
+      <div class="footerBlueBand" aria-hidden="true"></div>
     </footer>
   </div>
 </body>
+
 </html>
