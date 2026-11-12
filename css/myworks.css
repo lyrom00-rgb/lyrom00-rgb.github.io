@@ -6,7 +6,7 @@
 
 .myWorks h2 {
   margin: 0 0 18px;
-  color: var(--ink);
+  color: var(--dark-blue);
   text-align: center;
   font-size: clamp(2.8rem, 5vw, 4.2rem);
   font-weight: 700;
@@ -46,19 +46,55 @@
   display: flex;
   flex-direction: row;
   gap: 18px;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
+}
+
+.merchStickersRow > div {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .merchRow {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+}
+
+.merchRow > .subheading,
+.stickersRow > .subheading {
+  margin: 0 0 16px !important;
+  text-align: center;
+}
+
+.stickersWorks .workCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 360px;
+  margin: 0;
 }
 
 .merchRow .workCard {
-  width: min(100%, 480px);
-  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 360px;
+  width: 100%;
+  height: 360px;
+  margin: 0;
+}
+
+.merchRow .workCard img,
+.stickersWorks .workCard img {
+  width: auto;
+  max-width: 100%;
+  height: 360px;
+  object-fit: contain;
 }
 
 .stickersRow {
@@ -66,73 +102,70 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .stickersWorks {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   gap: 18px;
   width: 100%;
 }
 
-/* .stickersWorks img {
-  width: 48%;
-  height: auto;
-  object-fit: contain;
-} */
-
-/* .merchRow,
-.stickersRow,
-.packagingRow,
-.illustrationRow {
-  display: grid;
-  gap: 18px;
-} */
-
 .packagingRow {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
 }
 
-/* .packagingRow .workCard {
-  min-height: 220px;
-  background: transparent;
-  border-radius: 0;
-  box-shadow: none;
-} */
-
-.packagingRow {
-  object-fit: contain;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  min-height: 220px;
+.packagingRow .workCard1,
+.packagingRow .workCard2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  margin: 0;
 }
 
-/* .workCard1 img {
-  object-fit: contain;
+.packagingRow img {
+  display: block;
   width: auto;
   max-width: 100%;
-  height: 250 px;
-  margin: 0 auto;
-} */
+  height: 320px;
+  object-fit: contain;
+  margin: -75px 0 -90px 0;
+}
 
 .illustrationRow {
-  grid-template-columns: 1.15fr 1.4fr;
-  gap: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .illustrationRow .workCard {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
   background: transparent;
   border-radius: 0;
   box-shadow: none;
+  margin: 0;
 }
 
 .illustrationRow .workCard img {
   object-fit: contain;
-  margin: 0 auto;
   width: auto;
+  max-width: 100%;
+  height: 400px;
 }
 
 @media (max-width: 980px) {
@@ -140,11 +173,62 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .merchStickersRow,
-  .stickersRow,
-  .packagingRow,
-  .illustrationRow {
+  .stickersRow {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .merchStickersRow {
+    flex-direction: column;
+  }
+
+  .merchStickersRow > div {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .merchRow .workCard,
+  .stickersWorks .workCard {
+    flex: 0 0 auto;
+    height: auto;
+  }
+
+  .merchRow .workCard img,
+  .stickersWorks .workCard img {
+    width: 100%;
+    height: auto;
+  }
+
+  .stickersWorks {
+    flex-direction: column;
+  }
+
+  .packagingRow {
+    flex-direction: column;
+  }
+
+  .packagingRow .workCard1,
+  .packagingRow .workCard2 {
+    width: 100%;
+  }
+
+  .packagingRow img {
+    width: 100%;
+    height: auto;
+  }
+
+  .illustrationRow {
+    flex-direction: column;
+  }
+
+  .illustrationRow .workCard {
+    width: 100%;
+  }
+
+  .illustrationRow .workCard img {
+    width: 100%;
+    height: auto;
   }
 }
 
