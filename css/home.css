@@ -1,20 +1,24 @@
 .hero {
   position: relative;
-  padding: 13px 0px 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 84px;
+  padding: 10px 0 0;
   background: var(--page-bg);
-  text-align: center;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 .heroOrnament {
-  width: 100%;
+  width: 100vw;
+  margin: 0;
   overflow: hidden;
   line-height: 0;
-  /* padding: 100px 0; */
 }
 
 .heroOrnament img {
-  width: fill;
+  width: 100%;
   height: 98px;
   object-fit: cover;
   object-position: center;
@@ -28,9 +32,8 @@
   flex-wrap: wrap;
   gap: 0 10px;
   min-height: 220px;
-  margin-top: 12px;
-  margin-bottom: 14px;
-  padding: 18px 0 14px;
+  margin: 0;
+  padding: 0;
 }
 
 .heroTitle {
@@ -55,11 +58,13 @@
 .heroSubtitle {
   margin: 0;
   position: relative;
-  top: -12px;
+  top: 2px;
+  left: -50px;
   color: #bd1041;
   font-size: clamp(1.2rem, 2vw, 2.1rem);
   font-weight: 700;
   letter-spacing: -0.04em;
+  align-self: bottom;
 }
 
 @media (max-width: 640px) {
