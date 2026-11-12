@@ -18,7 +18,6 @@
 }
 
 .portfolioGroup > h3 {
-  margin: 0 0 16px;
   text-align: center;
   font-family: "Unbounded", sans-serif;
   font-size: 28px;
@@ -26,47 +25,34 @@
   font-weight: 500;
 }
 
-.worksGrid {
-  display: grid;
-  gap: 18px;
-  align-items: stretch;
-}
-
 .postersGrid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  /* grid-template-columns: repeat(4, minmax(0, 1fr)); */
 }
 
 .workCard {
   overflow: hidden;
   border-radius: 12px;
-  background: transparent;
-  box-shadow: none;
-}
-
-.workCard img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .merchStickersRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   gap: 18px;
-  align-items: start;
-}
-
-.merchRow,
-.stickersRow,
-.packagingRow,
-.illustrationRow {
-  display: grid;
-  gap: 18px;
+  align-items: center;
+  justify-content: center;
 }
 
 .merchRow {
-  grid-template-columns: 1fr;
-  justify-items: center;
+  display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -76,8 +62,32 @@
 }
 
 .stickersRow {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.stickersWorks {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  width: 100%;
+}
+
+/* .stickersWorks img {
+  width: 48%;
+  height: auto;
+  object-fit: contain;
+} */
+
+/* .merchRow,
+.stickersRow,
+.packagingRow,
+.illustrationRow {
+  display: grid;
+  gap: 18px;
+} */
 
 .packagingRow {
   grid-template-columns: repeat(2, minmax(0, 1fr));
