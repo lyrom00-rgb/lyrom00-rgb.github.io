@@ -45,8 +45,8 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(18px, 2.8vw, 38px);
-  font-size: clamp(1rem, 1.2vw, 1.55rem);
+  gap: 2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #edf3ff;
   list-style: none;

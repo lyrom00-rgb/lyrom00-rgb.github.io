@@ -23,7 +23,7 @@
   max-width: 1042px;
   margin: auto;
   gap: 100px;
-  padding: 0 0 8px;
+  margin: 0 0 -20px;
 }
 
 .siteFooter h2 {
