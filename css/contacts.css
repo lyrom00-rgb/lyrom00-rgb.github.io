@@ -67,3 +67,38 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 768px) {
+  .siteFooter,
+  .footerBlueBand {
+    width: 100%;
+  }
+
+  .footerContent {
+    padding: 16px;
+  }
+
+  .contactsRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin: 0;
+  }
+
+  .contactsRow a {
+    max-width: 100%;
+    white-space: normal;
+    font-size: 1rem;
+  }
+
+  .contactsRow img {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+  }
+
+  .contactsRow .subheading {
+    margin: 0 !important;
+    font-size: clamp(0.9rem, 4vw, 1.15rem) !important;
+  }
+}

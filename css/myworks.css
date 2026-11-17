@@ -177,6 +177,35 @@
 }
 
 @media (max-width: 768px) {
+  .myWorks {
+    padding: 0 16px;
+  }
+
+  .myWorks h2 {
+    font-size: clamp(2rem, 9vw, 3.5rem);
+  }
+
+  .myWorks .subheading,
+  .portfolioGroup > h3 {
+    font-size: clamp(1.1rem, 4.5vw, 1.75rem) !important;
+  }
+
+  .postersGrid {
+    flex-wrap: wrap;
+  }
+
+  .postersGrid .workCard {
+    flex: 1 1 calc(50% - 9px);
+    min-width: 0;
+    height: auto;
+  }
+
+  .postersGrid .workCard img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
   .merchStickersRow {
     flex-direction: column;
   }
@@ -214,6 +243,7 @@
   .packagingRow img {
     width: 100%;
     height: auto;
+    margin: 0;
   }
 
   .illustrationRow {
@@ -227,6 +257,10 @@
   .illustrationRow .workCard img {
     width: 100%;
     height: auto;
+  }
+
+  .illustrationRow .workCard {
+    margin: 0;
   }
 }
 

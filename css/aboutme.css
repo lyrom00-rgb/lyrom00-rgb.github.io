@@ -92,3 +92,24 @@
     padding: 26px 18px 24px;
   }
 }
+
+@media (max-width: 768px) {
+  .aboutMe {
+    padding: 16px;
+  }
+
+  .aboutGrid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+  }
+
+  .portraitWrap {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .portraitWrap img {
+    width: 100%;
+    height: auto;
+  }
+}

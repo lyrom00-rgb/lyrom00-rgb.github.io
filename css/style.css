@@ -101,8 +101,13 @@ h3,
   height: 100px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   body {
     padding-top: 126px;
+  }
+
+  .pageShell,
+  .pageContent {
+    gap: 48px;
   }
 }
